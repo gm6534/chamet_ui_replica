@@ -8,14 +8,15 @@ class UserDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: Container(
-        height: MediaQuery.of(context).size.height*0.8,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/img/img_3.png",), fit: BoxFit.cover),),
-        child: SafeArea(
-          child: Column(
-            children: [
-              Row(
+      body: Stack(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height*0.7,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/img/img_3.png",), fit: BoxFit.cover),),
+            child: SafeArea(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   IconButton(
                       onPressed: (){
@@ -82,9 +83,48 @@ class UserDetailScreen extends StatelessWidget {
                       icon: Icon(Icons.more_vert_outlined, color: Colors.white,)),
                 ],
               ),
-            ],
+            ),
           ),
-        ),
+          DraggableScrollableSheet(
+            // expand: true,
+            initialChildSize: 0.2,
+            minChildSize: 0.2,
+            maxChildSize: 1,
+            // expand: false,
+            builder: (context, controller) {
+              return Container(
+                // /height: MediaQuery.of(context).size.height * 0.3,
+                color: Colors.lightGreen[100],
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListView(
+                    controller: controller,
+                    children: [
+                      Row(
+                        children: [
+                          const Text("Gift",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16)),
+                          const Spacer(),
+                          IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.grey,
+                                size: 16,
+                              ))
+                        ],
+                      ),
+                      Row(
+                        children: [],
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
+          )
+        ],
       ),
       ///Bottom Button
       bottomNavigationBar: Row(

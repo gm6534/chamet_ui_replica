@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       home:
-      // VideoHomeScreen()
-      HomeScreen(),
+      VideoHomeScreen()
+      // HomeScreen(),
     );
   }
 }
