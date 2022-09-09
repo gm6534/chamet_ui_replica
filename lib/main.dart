@@ -1,5 +1,6 @@
 import 'package:chamet_ui_replica/Pages/HomeScreen.dart';
 import 'package:chamet_ui_replica/Pages/VideoHomeScreen.dart';
+import 'package:chamet_ui_replica/Test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       home:
+      // Testing(),
       VideoHomeScreen()
       // HomeScreen(),
     );

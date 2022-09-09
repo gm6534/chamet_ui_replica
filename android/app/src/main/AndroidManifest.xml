@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chamet_ui_replica">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="chamet_ui_replica"
         android:name="${applicationName}"

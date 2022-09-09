@@ -1,6 +1,7 @@
 import 'package:chamet_ui_replica/Pages/OptionScreen.dart';
 import 'package:chamet_ui_replica/Pages/PopularTab.dart';
 import 'package:chamet_ui_replica/Pages/UserDetailScreen.dart';
+import 'package:chamet_ui_replica/Pages/VideoScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,7 @@ PageController pageController=PageController();
             },
             children: [
               customTabBarView(),
-              Center(child: Text("Page " + _currentIndex.toString()),),
+              VideoScreen(),
               Center(child: Text("Page " + _currentIndex.toString()),),
               Center(child: Text("Page " + _currentIndex.toString()),),
               OptionScreen(),
